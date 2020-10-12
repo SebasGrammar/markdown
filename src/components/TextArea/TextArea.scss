@@ -1,0 +1,17 @@
+@import "../../scss/index.scss";
+
+.editor {
+    box-sizing: border-box;
+    
+    width: 100%;
+    min-height: 250px;
+    padding: $vertical-padding $horizontal-padding;
+
+    background: $secondary-color;
+    border: 1px solid $border-color;
+    outline: none;
+
+    @include box-shadow(1) 
+
+    resize: vertical;
+}
