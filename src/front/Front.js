@@ -25,13 +25,23 @@ export function Test() {
 
 export default function Front() {
 
-    const [input, setInput] = useState("23")
+    // const [input, setInput] = useState(<h4>lol</h4>)
+    const [input, setInput] = useState({
+        elements: [<h2>lol</h2>]
+    })
 
     function log(event) {
         // console.log(event.target.value)
 
         // setInput(event.target.value)
-        setInput( createElement("h1", event.target.value).textContent )
+        console.log(createElement("h1", event.target.value))
+
+        // setInput( createElement("h1", event.target.value) )
+        setInput({
+            elements: [<h2>One</h2>, <h1>Two</h1>]
+        })
+
+        // setInput( createElement("h1", event.target.value).textContent )
 
 
         // console.log(input)
@@ -47,6 +57,9 @@ export default function Front() {
             <Previewer>
                 <h1>QQe</h1>
                 <h2>woe</h2>
+                {
+                    input.elements
+                }
             </Previewer>
         </div>
     )
